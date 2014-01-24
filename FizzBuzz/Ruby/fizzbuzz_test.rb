@@ -3,6 +3,14 @@ require './fizzbuzz'
 describe "#fizzbuzz" do 
   let(:array){ fizzbuzz }
 
+  context "When the number has a 3" do
+    it{ expect(array[3]).to eq 'fizz'}
+    it{ expect(array[23]).to eq 'fizz'}
+    it{ expect(array[37]).to eq 'fizz'}
+    it{ expect(array[53]).to eq 'fizz'}
+    it{ expect(array[83]).to eq 'fizz'}
+  end
+
   context "When the number is multiple of 3" do
     it{ expect(array[3]).to eq 'fizz'}
     it{ expect(array[6]).to eq 'fizz'}
@@ -42,7 +50,7 @@ describe "#fizzbuzz" do
   end
 
   context "When the number is multiple of 5 and 7" do
-    it{ expect(array[35]).to eq 'buzzwhizz'}
+    it{ expect(array[35]).to eq 'fizzbuzzwhizz'}
     it{ expect(array[70]).to eq 'buzzwhizz'}
   end
 
