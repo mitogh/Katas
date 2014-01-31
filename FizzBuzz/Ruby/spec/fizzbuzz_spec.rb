@@ -1,4 +1,5 @@
-require './fizzbuzz'
+require 'spec_helper'
+require 'fizzbuzz'
 
 describe "#fizzbuzz" do 
   let(:array){ fizzbuzz }
